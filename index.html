@@ -1,0 +1,126 @@
+
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emerson Gálvez — CV</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="assets/photo.png" alt="Foto de Emerson Gálvez" class="avatar" />
+      <div>
+        <h1>Emerson Gálvez</h1>
+        <div class="role" data-i18n="role">Data Engineer</div>
+        <div class="badges">
+          <span class="badge">Azure · Databricks</span>
+          <span class="badge">Python · SQL · PySpark</span>
+          <span class="badge">Power BI</span>
+          <span class="badge">ETL / ELT</span>
+        </div>
+      </div>
+      <div class="actions">
+        <a id="dlBtn" class="btn" href="assets/cv_emerson-sp.pdf"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a1 1 0 0 1 1 1v9.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.42L11 13.6V4a1 1 0 0 1 1-1Zm-7 14a1 1 0 0 0-1 1v1a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-1a1 1 0 1 0-2 0v1H6v-1a1 1 0 0 0-1-1Z"/></svg> <span data-i18n="btn_download_label">Descargar CV (ES)</span></a>
+        <a class="btn" href="mailto:e.galvez1515@gmail.com"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v1.34l10 6.25 10-6.25V6a2 2 0 0 0-2-2Zm2 6.28-8.84 5.52a2 2 0 0 1-2.32 0L2 10.28V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7.72Z"/></svg> e.galvez1515@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/emerson-galvez-1b7430109/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8.5h4.96V24H.5V8.5zM9 8.5h4.77v2.11h.07c.66-1.25 2.26-2.56 4.65-2.56C22.9 8.05 24 10.3 24 13.92V24h-4.96v-8.95c0-2.14-.77-3.6-2.7-3.6-1.47 0-2.34.99-2.72 1.95-.14.34-.18.82-.18 1.31V24H8.5s.07-13.62 0-15.5H9z"/></svg> LinkedIn</a>
+        <button class="btn" id="themeBtn"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M21.64 13A9 9 0 1 1 11 2.36 7 7 0 1 0 21.64 13Z"/></svg> <span data-i18n="btn_theme_label">Tema</span></button>
+        <div class="btn" style="gap:6px">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2Zm7.93 9h-3.07a15 15 0 0 0-1.14-5A8.02 8.02 0 0 1 19.93 11ZM12 4c.9 0 2.45 2.16 3.02 6H8.98C9.55 6.16 11.1 4 12 4Zm-4.72 2a15 15 0 0 0-1.14 5H3.07A8.02 8.02 0 0 1 7.28 6Zm-4.21 7h3.07c.13 1.88.53 3.59 1.14 5A8.02 8.02 0 0 1 3.07 13Zm5.91 0h6.04c-.57 3.84-2.12 6-3.02 6s-2.45-2.16-3.02-6Zm7.74 5c.61-1.41 1.01-3.12 1.14-5h3.07a8.02 8.02 0 0 1-4.21 5Z"/></svg>
+          <label for="langSel" class="small" data-i18n="lang_label" style="margin-right:4px">Idioma</label>
+          <select id="langSel" aria-label="Language" style="background:transparent;color:inherit;border:1px solid var(--border);border-radius:8px;padding:6px">
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section class="card">
+        <h2 data-i18n="profile_title">Perfil</h2>
+        <p data-i18n="profile_body">Soy Ingeniero Comercial orientado a datos con experiencia en control de gestión e ingeniería de datos.</p>
+        <hr class="sep">
+        <h2 data-i18n="exp_title">Experiencia</h2>
+        <div id="expContent" data-i18n-html="experience_content" class="timeline"></div>
+        <hr class="sep">
+        <h2 data-i18n="edu_title">Educación</h2>
+        <div id="eduContent" data-i18n-html="education_content"></div>
+      </section>
+      <aside class="card">
+        <h2 data-i18n="contact_title">Contacto</h2>
+        <p class="small"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.05 15.05 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.36 11.36 0 0 0 3.56.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 7a1 1 0 0 1 1-1h3.48a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.56 1 1 0 0 1-.25 1l-2.2 2.24Z"/></svg> <strong>+56 9 4297 5571</strong></p>
+        <p class="small"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v1.34l10 6.25 10-6.25V6a2 2 0 0 0-2-2Zm2 6.28-8.84 5.52a2 2 0 0 1-2.32 0L2 10.28V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7.72Z"/></svg> <a href="mailto:e.galvez1515@gmail.com">e.galvez1515@gmail.com</a></p>
+        <p class="small"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8.5h4.96V24H.5V8.5zM9 8.5h4.77v2.11h.07c.66-1.25 2.26-2.56 4.65-2.56C22.9 8.05 24 10.3 24 13.92V24h-4.96v-8.95c0-2.14-.77-3.6-2.7-3.6-1.47 0-2.34.99-2.72 1.95-.14.34-.18.82-.18 1.31V24H8.5s.07-13.62 0-15.5H9z"/></svg> <a href="https://www.linkedin.com/in/emerson-galvez-1b7430109/" target="_blank" rel="noopener">linkedin.com/in/emerson-galvez-1b7430109</a></p>
+        <hr class="sep">
+        <h2 data-i18n="skills_title">Habilidades</h2>
+        <div id="skills" class="skills">
+          <span class="skill">Python</span><span class="skill">SQL</span><span class="skill">PySpark</span>
+          <span class="skill">Power BI</span><span class="skill">Azure Data Factory</span><span class="skill">Synapse</span>
+        </div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top:22px">
+      <h2 data-i18n="proj_title">Proyectos destacados</h2>
+      <div id="projContent" data-i18n-html="projects_content"></div>
+    </section>
+
+    <footer>
+      <div data-i18n-html="footer">© <span id="year"></span> Emerson Gálvez</div>
+    </footer>
+  </div>
+
+<script>
+// i18n dict
+const I18N = {
+  es: {role:"Data Engineer", btn_download_label:"Descargar CV (ES)", btn_theme_label:"Tema", lang_label:"Idioma",
+        profile_title:"Perfil", profile_body:"Soy Ingeniero Comercial orientado a datos con experiencia en control de gestión e ingeniería de datos. Me apasiona transformar datos en decisiones, automatizar procesos y construir pipelines robustos. Me adapto rápido, comunico con claridad y disfruto resolver problemas complejos.",
+        exp_title:"Experiencia", edu_title:"Educación", contact_title:"Contacto", skills_title:"Habilidades",
+        proj_title:"Proyectos destacados",
+        projects_content:`<ul class="list"><li class="item"><h3>Automatización y Reporting Energía — ENEL</h3></li><li class="item"><h3>Minería (BHP) — Soporte de modelos</h3></li></ul>`,
+        experience_content:`<div class="timeline"><div class="t item"><h3>Data Engineer Senior Analyst — Accenture</h3><div class="meta">Jul 2022 — Presente</div></div></div>`,
+        education_content:`<ul class="list"><li class="item"><h3>Diplomado Python — UC (2024)</h3></li></ul>`,
+        footer:"© <span id='year'></span> Emerson Gálvez · Hecho con HTML/CSS/JS y hospedado en GitHub Pages"},
+  en: {role:"Data Engineer", btn_download_label:"Download CV (EN)", btn_theme_label:"Theme", lang_label:"Language",
+        profile_title:"Profile", profile_body:"I'm a data-oriented Business Engineer with experience in management control and data engineering. I love turning data into decisions, automating processes, and building robust pipelines. Fast learner, clear communicator, and problem-solver.",
+        exp_title:"Experience", edu_title:"Education", contact_title:"Contact", skills_title:"Skills",
+        proj_title:"Featured projects",
+        projects_content:`<ul class="list"><li class="item"><h3>Energy Automation & Reporting — ENEL</h3></li><li class="item"><h3>Mining (BHP) — Analytical models support</h3></li></ul>`,
+        experience_content:`<div class="timeline"><div class="t item"><h3>Senior Analyst, Data Engineer — Accenture</h3><div class="meta">Jul 2022 — Present</div></div></div>`,
+        education_content:`<ul class="list"><li class="item"><h3>Professional Python Diploma — PUC (2024)</h3></li></ul>`,
+        footer:"© <span id='year'></span> Emerson Gálvez · Built with HTML/CSS/JS and hosted on GitHub Pages"}
+};
+
+function applyI18n(lang){
+  const d = I18N[lang]||I18N.es;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{el.textContent=d[el.getAttribute("data-i18n")]||el.textContent;});
+  document.querySelectorAll("[data-i18n-html]").forEach(el=>{el.innerHTML=d[el.getAttribute("data-i18n-html")]||el.innerHTML;});
+  document.documentElement.setAttribute("lang", lang);
+  localStorage.setItem("lang", lang);
+  const sel=document.getElementById("langSel"); if(sel) sel.value=lang;
+}
+
+// theme
+(function(){const r=document.documentElement;const s=localStorage.getItem('theme');if(s)r.setAttribute('data-theme',s);document.getElementById('themeBtn').onclick=()=>{const t=r.getAttribute('data-theme')==='light'?'dark':'light';r.setAttribute('data-theme',t);localStorage.setItem('theme',t);};})();
+
+// lang init
+const saved=localStorage.getItem("lang")||((navigator.language||"es").startsWith("en")?"en":"es");
+applyI18n(saved);
+document.getElementById("langSel").addEventListener("change",e=>applyI18n(e.target.value));
+
+// update download per language
+function updateDownload(){
+  const lang = localStorage.getItem("lang")||"es"; const a=document.getElementById("dlBtn");
+  if(lang==='en'){ a.href='assets/cv_emerson-en.pdf'; a.querySelector('[data-i18n="btn_download_label"]').textContent='Download CV (EN)'; }
+  else { a.href='assets/cv_emerson-sp.pdf'; a.querySelector('[data-i18n="btn_download_label"]').textContent='Descargar CV (ES)'; }
+}
+updateDownload();
+const __old=applyI18n;
+applyI18n=function(lang){ __old(lang); updateDownload(); };
+
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
