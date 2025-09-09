@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emerson Gálvez — CV</title>
+  <style>
+    :root {
+      --bg-color: #f0f2f5;
+      --card-bg: #ffffff;
+      --text-color: #333;
+      --title-color: #000;
+      --border: #e0e0e0;
+      --link: #0066cc;
+      --badge-bg: #e5e5e5;
+      --badge-color: #555;
+    }
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --card-bg: #1e1e1e;
+      --text-color: #e0e0e0;
+      --title-color: #f0f0f0;
+      --border: #333;
+      --link: #66b3ff;
+      --badge-bg: #333;
+      --badge-color: #ccc;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+    }
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--border);
+    }
+    h1 {
+      font-size: 2.2em;
+      margin: 0;
+      color: var(--title-color);
+      line-height: 1.2;
+    }
+    .role {
+      font-size: 1.1em;
+      color: var(--text-color);
+      margin-top: 5px;
+    }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .badge {
+      background-color: var(--badge-bg);
+      color: var(--badge-color);
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 0.85em;
+      white-space: nowrap;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-left: auto;
+    }
+    .btn {
+      background: var(--bg-color);
+      color: var(--text-color);
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9em;
+      cursor: pointer;
+      transition: background-color 0.2s, border-color 0.2s;
+    }
+    .btn:hover {
+      background-color: var(--border);
+      border-color: var(--text-color);
+    }
+    .icon {
+      width: 16px;
+      height: 16px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid var(--border);
+    }
+    h2 {
+      font-size: 1.4em;
+      color: var(--title-color);
+      margin-top: 0;
+    }
+    .small { font-size: 0.9em; display:flex; gap: 8px; align-items: center; }
+    .sep {
+      border: 0;
+      height: 1px;
+      background: var(--border);
+      margin: 20px 0;
+    }
+    .timeline {
+      padding-left: 20px;
+      border-left: 2px solid var(--border);
+      position: relative;
+    }
+    .timeline .t.item {
+      position: relative;
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+    .timeline .t.item::before {
+      content: '';
+      position: absolute;
+      left: -9px;
+      top: 5px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--link);
+      border: 2px solid var(--card-bg);
+      box-shadow: 0 0 0 2px var(--link);
+    }
+    .timeline .bullets {
+      margin-top: 8px;
+      padding-left: 20px;
+    }
+    .timeline .bullets li {
+      margin-bottom: 4px;
+    }
+    .list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    .list .item {
+      margin-bottom: 12px;
+    }
+    .list .item h3 {
+      font-size: 1.1em;
+      margin: 0;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .skill {
+      background-color: var(--badge-bg);
+      color: var(--badge-color);
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 0.9em;
+    }
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      padding: 10px 0;
+      font-size: 0.8em;
+      color: var(--badge-color);
+    }
+    footer a { color: var(--link); }
+    @media (max-width: 500px) {
+      .header { flex-direction: column; text-align: center; align-items: center; }
+      .actions { margin-left: 0; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="assets/photo.png" alt="Foto de Emerson Gálvez" class="avatar" />
+      <div>
+        <h1>Emerson Gálvez</h1>
+        <div class="role" data-i18n="role">Data Engineer</div>
+        <div class="badges">
+          <span class="badge">Azure · Databricks</span>
+          <span class="badge">Python · SQL · PySpark</span>
+          <span class="badge">Power BI</span>
+          <span class="badge">ETL / ELT</span>
+        </div>
+      </div>
+      <div class="actions">
+        <a id="dlBtn" class="btn" href="assets/cv_emerson-sp.pdf"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a1 1 0 0 1 1 1v9.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.42L11 13.6V4a1 1 0 0 1 1-1Zm-7 14a1 1 0 0 0-1 1v1a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-1a1 1 0 1 0-2 0v1H6v-1a1 1 0 0 0-1-1Z"/></svg> <span data-i18n="btn_download_label">Descargar CV (ES)</span></a>
+        <a class="btn" href="mailto:e.galvez1515@gmail.com"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v1.34l10 6.25 10-6.25V6a2 2 0 0 0-2-2Zm2 6.28-8.84 5.52a2 2 0 0 1-2.32 0L2 10.28V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7.72Z"/></svg> e.galvez1515@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/emerson-galvez-1b7430109/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8.5h4.96V24H.5V8.5zM9 8.5h4.77v2.11h.07c.66-1.25 2.26-2.56 4.65-2.56C22.9 8.05 24 10.3 24 13.92V24h-4.96v-8.95c0-2.14-.77-3.6-2.7-3.6-1.47 0-2.34.99-2.72 1.95-.14.34-.18.82-.18 1.31V24H8.5s.07-13.62 0-15.5H9z"/></svg> LinkedIn</a>
+        <a class="btn" href="https://github.com/emerson1000" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> GitHub</a>
+        <button class="btn" id="themeBtn"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M21.64 13A9 9 0 1 1 11 2.36 7 7 0 1 0 21.64 13Z"/></svg> <span data-i18n="btn_theme_label">Tema</span></button>
+        <div class="btn" style="gap:6px">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2Zm7.93 9h-3.07a15 15 0 0 0-1.14-5A8.02 8.02 0 0 1 19.93 11ZM12 4c.9 0 2.45 2.16 3.02 6H8.98C9.55 6.16 11.1 4 12 4Zm-4.72 2a15 15 0 0 0-1.14 5H3.07A8.02 8.02 0 0 1 7.28 6Zm-4.21 7h3.07c.13 1.88.53 3.59 1.14 5A8.02 8.02 0 0 1 3.07 13Zm5.91 0h6.04c-.57 3.84-2.12 6-3.02 6s-2.45-2.16-3.02-6Zm7.74 5c.61-1.41 1.01-3.12 1.14-5h3.07a8.02 8.02 0 0 1-4.21 5Z"/></svg>
+          <label for="langSel" class="small" data-i18n="lang_label" style="margin-right:4px">Idioma</label>
+          <select id="langSel" aria-label="Language" style="background:transparent;color:inherit;border:1px solid var(--border);border-radius:8px;padding:6px">
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section class="card">
+        <h2 data-i18n="profile_title">Perfil</h2>
+        <p data-i18n="profile_body">Soy Ingeniero Comercial orientado a datos con experiencia en control de gestión e ingeniería de datos. Me apasiona transformar datos en decisiones, automatizar procesos y construir pipelines robustos. Me adapto rápido, comunico con claridad y disfruto resolver problemas complejos.</p>
+        <hr class="sep">
+        <h2 data-i18n="exp_title">Experiencia</h2>
+        <div id="expContent" data-i18n-html="experience_content" class="timeline"></div>
+        <hr class="sep">
+        <h2 data-i18n="edu_title">Educación</h2>
+        <div id="eduContent" data-i18n-html="education_content"></div>
+      </section>
+      <aside class="card">
+        <h2 data-i18n="contact_title">Contacto</h2>
+        <p class="small"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.05 15.05 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.36 11.36 0 0 0 3.56.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 7a1 1 0 0 1 1-1h3.48a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.56 1 1 0 0 1-.25 1l-2.2 2.24Z"/></svg> <strong>+56 9 4297 5571</strong></p>
+        <p class="small"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v1.34l10 6.25 10-6.25V6a2 2 0 0 0-2-2Zm2 6.28-8.84 5.52a2 2 0 0 1-2.32 0L2 10.28V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7.72Z"/></svg> <a href="mailto:e.galvez1515@gmail.com">e.galvez1515@gmail.com</a></p>
+        <p class="small"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8.5h4.96V24H.5V8.5zM9 8.5h4.77v2.11h.07c.66-1.25 2.26-2.56 4.65-2.56C22.9 8.05 24 10.3 24 13.92V24h-4.96v-8.95c0-2.14-.77-3.6-2.7-3.6-1.47 0-2.34.99-2.72 1.95-.14.34-.18.82-.18 1.31V24H8.5s.07-13.62 0-15.5H9z"/></svg> <a href="https://www.linkedin.com/in/emerson-galvez-1b7430109/" target="_blank" rel="noopener">linkedin.com/in/emerson-galvez-1b7430109</a></p>
+        <p class="small"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> <a href="https://github.com/emerson1000" target="_blank" rel="noopener">github.com/emerson1000</a></p>
+        <hr class="sep">
+        <h2 data-i18n="skills_title">Habilidades</h2>
+        <div id="skills" class="skills">
+          <span class="skill">Python</span><span class="skill">SQL</span><span class="skill">PySpark</span>
+          <span class="skill">Power BI</span><span class="skill">Azure Data Factory</span><span class="skill">Synapse</span>
+        </div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top:22px">
+      <h2 data-i18n="proj_title">Proyectos destacados</h2>
+      <div id="projContent" data-i18n-html="projects_content"></div>
+    </section>
+
+    <footer>
+      <div data-i18n-html="footer">© <span id="year"></span> Emerson Gálvez</div>
+    </footer>
+  </div>
+
+<script>
+// i18n dict
+const I18N = {
+  es: {role:"Data Engineer", btn_download_label:"Descargar CV (ES)", btn_theme_label:"Tema", lang_label:"Idioma",
+        profile_title:"Perfil", profile_body:"Soy Ingeniero Comercial orientado a datos con experiencia en control de gestión e ingeniería de datos. Me apasiona transformar datos en decisiones, automatizar procesos y construir pipelines robustos. Me adapto rápido, comunico con claridad y disfruto resolver problemas complejos.",
+        exp_title:"Experiencia", edu_title:"Educación", contact_title:"Contacto", skills_title:"Habilidades",
+        proj_title:"Proyectos destacados",
+        projects_content:`<ul class="list"><li class="item"><h3>Data Engineer Sr Analyst — Accenture</h3><ul class="bullets"><li>Descripción de propiedades mineralógicas del modelo de bloques-Zaldivar (Antofagasta Minerals)</li><li>Informe de automatización laboratorio de análisis químico-Antucoya (Antofagasta Minerals)</li><li>Modificación de reportes de facturación de empresa ENEL de cara a generar información regulatoria y no regulatoria a la superintendencia de electricidad y combustibles (SEC)</li><li>Migración de información de cursos asociados a usuarios desde API Voxy al hosting de resultados de cursos API Cornerstone (Banco Security-Chile)</li><li>Soporte técnico de modelos analíticos de faenas Los Colorados, Spence, Escondida, actualización semanal value tracking, resolución de tickets, reentrenamiento de modelos predictivos y mejoras de procesos existentes (BHP Billiton, Chile)</li><li>Creación de framework paramétrico para traspaso de tablas de tipo full e incremental entre compañías utilizando azure data factory y synapse analytics. (Grupo Security-Chile)</li></ul></li></ul>`,
+        experience_content:`<div class="timeline"><div class="t item"><h3>Data Engineer Senior Analyst — Accenture</h3><div class="meta">Jul 2022 — Presente</div><ul class="bullets"><li>Diseñé e implementé un framework paramétrico en Azure Data Factory para transferencias full/incrementales entre más de 20 tablas.</li><li>Automatización de informes regulatorios para ENEL (SEC) reduciendo el tiempo de entrega de 3 días a 30 minutos.</li><li>Soporte continuo de modelos analíticos en faenas BHP (Los Colorados, Spence, Escondida) con actualizaciones semanales y re-entrenamiento de modelos predictivos.</li></ul></div><div class="t item"><h3>Big Data Engineer — Asociación Chilena de Seguridad (ACHS)</h3><div class="meta">Nov 2021 — Jun 2022</div><ul class="bullets"><li>Migración de ETL on-premise a Azure: 15 pipelines documentados y versionados.</li><li>PoC de ingestas Postman/REST a Data Lake Gen2.</li></ul></div></div>`,
+        education_content:`<ul class="list"><li class="item"><h3>Diplomado Python — UC (2024)</h3></li><li class="item"><h3>Diplomado Data Science — PUC (2021)</h3></li><li class="item"><h3>Microsoft Certified: Fabric Analytics Engineer Associate (2024)</h3></li><li class="item"><h3>Microsoft Certified: Azure Data Fundamentals (2023)</h3></li></ul>`,
+        footer:"© <span id='year'></span> Emerson Gálvez · Hecho con HTML/CSS/JS y hospedado en GitHub Pages"},
+  en: {role:"Data Engineer", btn_download_label:"Download CV (EN)", btn_theme_label:"Theme", lang_label:"Language",
+        profile_title:"Profile", profile_body:"I'm a data-oriented Business Engineer with experience in management control and data engineering. I love turning data into decisions, automating processes, and building robust pipelines. Fast learner, clear communicator, and problem-solver.",
+        exp_title:"Experience", edu_title:"Education", contact_title:"Contact", skills_title:"Skills",
+        proj_title:"Featured projects",
+        projects_content:`<ul class="list"><li class="item"><h3>Data Engineer Sr Analyst — Accenture</h3><ul class="bullets"><li>Description of mineralogical properties of the block model-Zaldivar (Antofagasta Minerals)</li><li>Automation report for chemical analysis laboratory-Antucoya (Antofagasta Minerals)</li><li>Modification of billing reports for ENEL to generate regulatory and non-regulatory information for the Superintendence of Electricity and Fuels (SEC)</li><li>Migration of user-associated course information from Voxy API to Cornerstone API results hosting (Banco Security-Chile)</li><li>Technical support for analytical models at Los Colorados, Spence, Escondida sites, weekly value tracking updates, ticket resolution, re-training of predictive models, and existing process improvements (BHP Billiton, Chile)</li><li>Creation of a parametric framework for transferring full and incremental tables between companies using Azure Data Factory and Synapse Analytics. (Grupo Security-Chile)</li></ul></li></ul>`,
+        experience_content:`<div class="timeline"><div class="t item"><h3>Senior Analyst, Data Engineer — Accenture</h3><div class="meta">Jul 2022 — Present</div><ul class="bullets"><li>Designed and implemented a parametric framework in Azure Data Factory for full/incremental transfers between more than 20 tables.</li><li>Automation of regulatory reports for ENEL (SEC), reducing delivery time from 3 days to 30 minutes.</li><li>Continuous support for analytical models at BHP sites (Los Colorados, Spence, Escondida) with weekly updates and predictive model re-training.</li></ul></div><div class="t item"><h3>Big Data Engineer — Asociación Chilena de Seguridad (ACHS)</h3><div class="meta">Nov 2021 — Jun 2022</div><ul class="bullets"><li>Migration of on-premise ETL to Azure: 15 documented and versioned pipelines.</li><li>PoC of Postman/REST ingestions to Data Lake Gen2.</li></ul></div></div>`,
+        education_content:`<ul class="list"><li class="item"><h3>Professional Python Diploma — PUC (2024)</h3></li><li class="item"><h3>Data Science Diploma — PUC (2021)</h3></li><li class="item"><h3>Microsoft Certified: Fabric Analytics Engineer Associate (2024)</h3></li><li class="item"><h3>Microsoft Certified: Azure Data Fundamentals (2023)</h3></li></ul>`,
+        footer:"© <span id='year'></span> Emerson Gálvez · Built with HTML/CSS/JS and hosted on GitHub Pages"}
+};
+
+function applyI18n(lang){
+  const d = I18N[lang]||I18N.es;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{el.textContent=d[el.getAttribute("data-i18n")]||el.textContent;});
+  document.querySelectorAll("[data-i18n-html]").forEach(el=>{el.innerHTML=d[el.getAttribute("data-i18n-html")]||el.innerHTML;});
+  document.documentElement.setAttribute("lang", lang);
+  localStorage.setItem("lang", lang);
+  const sel=document.getElementById("langSel"); if(sel) sel.value=lang;
+}
+
+// theme
+(function(){const r=document.documentElement;const s=localStorage.getItem('theme');if(s)r.setAttribute('data-theme',s);document.getElementById('themeBtn').onclick=()=>{const t=r.getAttribute('data-theme')==='light'?'dark':'light';r.setAttribute('data-theme',t);localStorage.setItem('theme',t);};})();
+
+// lang init
+const saved=localStorage.getItem("lang")||((navigator.language||"es").startsWith("en")?"en":"es");
+applyI18n(saved);
+document.getElementById("langSel").addEventListener("change",e=>applyI18n(e.target.value));
+
+// update download per language
+function updateDownload(){
+  const lang = localStorage.getItem("lang")||"es"; const a=document.getElementById("dlBtn");
+  if(lang==='en'){ a.href='assets/cv_emerson-en.pdf'; a.querySelector('[data-i18n="btn_download_label"]').textContent='Download CV (EN)'; }
+  else { a.href='assets/cv_emerson-sp.pdf'; a.querySelector('[data-i18n="btn_download_label"]').textContent='Descargar CV (ES)'; }
+}
+updateDownload();
+const __old=applyI18n;
+applyI18n=function(lang){ __old(lang); updateDownload(); };
+
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

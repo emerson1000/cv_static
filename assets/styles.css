@@ -1,0 +1,20 @@
+
+:root{--bg:#0b0f14;--surface:#121822;--text:#e6edf3;--muted:#94a3b8;--chip:#1f2937;--accent:#22d3ee;--card:#0f172a;--border:#243142;}
+html[data-theme="light"]{--bg:#f6f8fa;--surface:#ffffff;--text:#0b1320;--muted:#44546a;--chip:#e8eef5;--accent:#0ea5e9;--card:#ffffff;--border:#e2e8f0;}
+*{box-sizing:border-box}body{margin:0;font:16px/1.6 system-ui;color:var(--text);background:var(--bg)}
+.container{max-width:1050px;margin:0 auto;padding:28px}
+.header{display:flex;gap:24px;align-items:center;flex-wrap:wrap;padding:22px;border:1px solid var(--border);background:var(--surface);border-radius:18px}
+.avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid var(--border)}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.badge{background:var(--chip);padding:6px 10px;border-radius:999px;border:1px solid var(--border);font-size:13px}
+.actions{margin-left:auto;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-flex;gap:8px;align-items:center;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--text);text-decoration:none}
+.grid{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;margin-top:22px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:20px}
+.list{list-style:none;padding:0;margin:0;display:grid;gap:16px}
+.item{padding:14px;border:1px solid var(--border);border-radius:14px;background:var(--card)}
+.skills{display:flex;flex-wrap:wrap;gap:8px}
+.skill{padding:7px 10px;background:var(--chip);border:1px solid var(--border);border-radius:999px;font-size:13px}
+.small{font-size:13px;color:var(--muted)}
+.timeline{position:relative;padding-left:14px}.timeline:before{content:"";position:absolute;left:5px;top:0;bottom:0;width:2px;background:var(--border)}
+.timeline .t{position:relative;margin:0 0 14px 0;padding-left:14px}.timeline .t:before{content:"";position:absolute;left:-2px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--accent)}
